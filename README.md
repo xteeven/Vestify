@@ -5,13 +5,13 @@ We perceive the world based on the processing of sensorial inputs we get from ma
 ## Getting Started
 1. Turn On the vest
 
-2. Plug in the sender to your pc and wait for the geen light
+2. Confirm the Bluetooth name of the VEST (Normally it is called  LMU_VEST Segundo)
 
-![sender](im1.gif)
+3. (Test it) Download the app BLE Scanner in Android (or an equivalent for Ios), connect to the vest, and send the following string "40;40;111111" this should activate all the motors
 
-3. Then, check the serial port in arduino ide.
+4. After you confirmed that the VEST is working, you can start playing with it from your own app, you only have to send strings with the motor information to the same BLE feature you used in the previous step. (you would have to implement BLE communication in your app)
 
-4. From any language, send a String to the Port found in step 3 with the following structure (see Serial.py as example):
+5 The encoding of the message works as follows:
 ```
  String message = "AA;FF;MMMMMM"
 ``` 
